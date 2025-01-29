@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class FizzbuzzService {
 	
-	/** main method: provides the attended fizzbuzz result  */
+	/** main method: provides the expected fizzbuzz result  */
 	public String getResult(FizzBuzzRequest entry, String uri) {
 		
 		// controls
@@ -44,12 +44,13 @@ public class FizzbuzzService {
 		
 	/** application of the substitution filters */
 	private String convert(int i,  LinkedHashMap<Integer, String> filters) {
+		
 		StringBuilder result = new StringBuilder();  
-        for (Map.Entry<Integer, String> entry : filters.entrySet()) {
-            if(i % entry.getKey() == 0) { 
-            	result.append(entry.getValue()); 
-            }
-        }
+		for (Map.Entry<Integer, String> entry : filters.entrySet()) {
+			if(i % entry.getKey() == 0) { 
+				result.append(entry.getValue()); 
+			}
+		}
 		return result.isEmpty()? String.valueOf(i): result.toString();
 	}
 	

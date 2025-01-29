@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 public class FizzBuzzRequestCount {
 
 	@EmbeddedId
-    private EntryId entryId;
+	private EntryId entryId;
 		
 	private int total;
 	

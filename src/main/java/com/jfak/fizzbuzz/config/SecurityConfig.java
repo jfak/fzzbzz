@@ -21,11 +21,11 @@ public class SecurityConfig {
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		
-    	http
+		http
   		.csrf(AbstractHttpConfigurer::disable)
   		.authorizeHttpRequests( auth -> auth.requestMatchers(WHITE_LIST_URL).permitAll())
   		.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-         ;	
+  		;	
 
   	    return http.build();
 	}	

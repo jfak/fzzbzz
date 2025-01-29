@@ -29,9 +29,9 @@ public class FizzbuzzController {
 	private final FizzbuzzService fizzbuzzService; 
 	private final FizzBuzzRequestCountService fizzBuzzRequestCountService;
 
-    @Operation(summary = "Generate a FizzBuzz sequence", 
+	@Operation(summary = "Generate a FizzBuzz sequence", 
             description = "Generates a sequence of numbers up to the specified limit, replacing multiples of the given parameters with the corresponding strings (str1 and str2).")
-	 @ApiResponses(value = {
+    @ApiResponses(value = {
 	     @ApiResponse(responseCode = "200", description = "successful generated sequence"),
 	     @ApiResponse(responseCode = "400", description = "invalid parameters")
 	 })
@@ -46,7 +46,7 @@ public class FizzbuzzController {
     
     @Operation(summary = "Provide the most frequent request for the specified parameters", 
             description = "Provides the total number of the  most frequent request for the specified parameters.")
-	 @ApiResponses(value = {
+    @ApiResponses(value = {
 	     @ApiResponse(responseCode = "200", description = "successful request"),
 	     @ApiResponse(responseCode = "400", description = "invalid parameters"),
 	     @ApiResponse(responseCode = "404", description = "Data not available. You must generate some FizzBuzz requests before.")

@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode
 public class EntryId implements Serializable {
 
-    private static final long serialVersionUID = 1L; 
+	private static final long serialVersionUID = 1L; 
 
 	private int int1;
 	
